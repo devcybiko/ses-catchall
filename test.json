@@ -1,0 +1,22 @@
+{
+  "Records": [
+    {
+      "EventSource": "aws:sns",
+      "EventVersion": "1.0",
+      "EventSubscriptionArn": "arn:aws:sns:us-east-1:123456789012:IncomingEmail:12345678",
+      "Sns": {
+        "Type": "Notification",
+        "MessageId": "EXAMPLE7c191be45-e9aedb9a-02f9-4d12-a87d-dd0099a07f8a-000000",
+        "TopicArn": "arn:aws:sns:us-east-1:123456789012:IncomingEmail",
+        "Subject": "Amazon SES Email Receipt Notification",
+        "Message": "{\"mail\": {\"headers\":[{\"name\":\"From\",\"value\":\"test@example.com <admin@agilefrontiers.awsapps.com>\"}],\"destination\":[\"test@example.com\"]},\"content\":\"email content\"}"
+      },
+      "Timestamp": "2019-09-06T18:52:16.076Z",
+      "SignatureVersion": "1",
+      "Signature": "012345678901example==",
+      "SigningCertUrl": "https://sns.us-east-1.amazonaws.com/SimpleNotificationService-01234567890123456789012345678901.pem",
+      "UnsubscribeUrl": "https://sns.us-east-1.amazonaws.com/?Action=Unsubscribe&SubscriptionArn=arn:aws:sns:us-east-1:0123456789012:IncomingEmail:0b863538-3f32-462e-9c89-8d8e0example",
+      "MessageAttributes": {}
+    }
+  ]
+}

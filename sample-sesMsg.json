@@ -1,0 +1,160 @@
+//event.Records[0].ses
+{
+    "notificationType": "Received",
+    "mail": {
+        "timestamp": "2021-11-19T14:59:18.056Z",
+        "source": "0100017d38b57c61-f1af1c03-d81e-4101-b7df-4efaac95b71e-000000@amazonses.com",
+        "messageId": "pp7o1b869j1mbmmegnjm215bi5o331noilsell01",
+        "destination": [
+            "test@agilefrontiers.com"
+        ],
+        "headersTruncated": false,
+        "headers": [
+            {
+                "name": "Return-Path",
+                "value": "<0100017d38b57c61-f1af1c03-d81e-4101-b7df-4efaac95b71e-000000@amazonses.com>"
+            },
+            {
+                "name": "Received",
+                "value": "from a11-32.smtp-out.amazonses.com (a11-32.smtp-out.amazonses.com [54.240.11.32]) by inbound-smtp.us-east-1.amazonaws.com with SMTP id pp7o1b869j1mbmmegnjm215bi5o331noilsell01 for test@agilefrontiers.com; Fri, 19 Nov 2021 14:59:18 +0000 (UTC)"
+            },
+            {
+                "name": "X-SES-Spam-Verdict",
+                "value": "PASS"
+            },
+            {
+                "name": "X-SES-Virus-Verdict",
+                "value": "PASS"
+            },
+            {
+                "name": "Received-SPF",
+                "value": "pass (spfCheck: domain of amazonses.com designates 54.240.11.32 as permitted sender) client-ip=54.240.11.32; envelope-from=0100017d38b57c61-f1af1c03-d81e-4101-b7df-4efaac95b71e-000000@amazonses.com; helo=a11-32.smtp-out.amazonses.com;"
+            },
+            {
+                "name": "Authentication-Results",
+                "value": "amazonses.com; spf=pass (spfCheck: domain of amazonses.com designates 54.240.11.32 as permitted sender) client-ip=54.240.11.32; envelope-from=0100017d38b57c61-f1af1c03-d81e-4101-b7df-4efaac95b71e-000000@amazonses.com; helo=a11-32.smtp-out.amazonses.com; dkim=pass header.i=@amazonses.com; dkim=pass header.i=@naiwe.com; dmarc=none header.from=naiwe.com;"
+            },
+            {
+                "name": "X-SES-RECEIPT",
+                "value": "AEFBQUFBQUFBQUFHQ2Y2K3JmMVJVWUx1eG93SndLV200ZVdUQzF5ajFrKzZ4aS9GYmdqNmpndkhYVFFIQks1UXZWZWNqUklEc3JRMEVLQ1NJcmZmSTBSL3hzMVM0VFdGSFJxY3NTMjlVU3V6MGptWlNCZEhEd2hyTFV6Ny9hVXptVm9LTG5zRkVDRlg2eEhodHZwZERBQ1lWMjFPUzVRd0wvNE5FMDBPQUdEY1RUb012cFdsUGpGa2tqTWREZ3dlSXVPR2wyT29SaktTa2V5VkpNcG04N2FhQ2kwMlVsamNJamlGVHJYUEFsblZXcXRMcEl6N0FkQzRqUWcwWXFOYWQ3d1lLaU0vdW9vNEhVMWJ5SGF0ZlhiTXhyUENYcW5UbkxCZ1FHckp0eVFPRDJ1QTFvb0E4TjlySEFhQXdKVzVXLzdHMTZ4M0VlUmNkQitqdmN1L3BMR2JsazhLalQwdk1YSFYzcWEzNHdML0xDVG03blF6cGNnPT0="
+            },
+            {
+                "name": "X-SES-DKIM-SIGNATURE",
+                "value": "a=rsa-sha256; q=dns/txt; b=f6DW7nNaOQDvCld2eM6z6subS/3DA30hkhRzSl9BkR81dzrGUBBBFsIQBtzmzq8f9dkn/hH/KrRUsB0ps4AXlzuzkYLVZ4xwT+gV8xYhYC2w8EC0/7JtRLFbnCJhn6TsO97cft9MCz/Nx+rleRvvkswHGGd7tCu3N5LDWo7fwlQ=; c=relaxed/simple; s=ug7nbtf4gccmlpwj322ax3p6ow6yfsug; d=amazonses.com; t=1637333958; v=1; bh=op2ghlgl5zR/EwkJhn6tDlaptgu5QoyeN8g7wPgL8yU=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;"
+            },
+            {
+                "name": "DKIM-Signature",
+                "value": "v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple; s=2rotzepakrnqzb4ex2hqzihae4ibkwow; d=naiwe.com; t=1637333957; h=Subject:From:To:Date:Mime-Version:Content-Type:References:Message-Id; bh=op2ghlgl5zR/EwkJhn6tDlaptgu5QoyeN8g7wPgL8yU=; b=QVc45QhP5h0NQ6mfI+cxQdSmjKfU6RdxAUKV4FzVOwGADMkL7ijJ8Us03TE/EA8l2WxXClpQ1HiH0T/nxUhRQHOFSneFh+LIb3ZmQdvBJ6rsc9oJgHQGw+PnNpQWEcyGT0PG4dFxJa7Ohd2pCaDHW8mgazAa4gwyujawlwQQIyVkleU6KYZg6Z+Zsqm3hIAINB4j3Wtyf7PlzwwzvL75B0/PsZ4AxDOYATG3KG9itIFLXmZd57Gy2qRzU9pkwFI5YzfxU8oSb/uFM36DWAnJGCWL3fnFJBTxx+qkhE45bMUIuL3BEr04Bd8RjlwQ+ZnuvsQk2Qcd/p/9tT76mcJZLg=="
+            },
+            {
+                "name": "DKIM-Signature",
+                "value": "v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple; s=ug7nbtf4gccmlpwj322ax3p6ow6yfsug; d=amazonses.com; t=1637333957; h=Subject:From:To:Date:Mime-Version:Content-Type:References:Message-Id:Feedback-ID; bh=op2ghlgl5zR/EwkJhn6tDlaptgu5QoyeN8g7wPgL8yU=; b=BmXmSbNyPzNqnfHR1XGS/sYTKJ1qMaNzLaCKVo8e5fkMOG4E6r0Gy77rt1M1xYtMCKQQDegbQGFCHKJWyGXf7jenzpK52K/+rWmKCxj0whOPYDgVLBSbeOWc07qQDqR5spp1m6G9mvn1G7Ie3AS2OmUcTM02WgvapidaA4Q/L4M="
+            },
+            {
+                "name": "Subject",
+                "value": "test 9:59"
+            },
+            {
+                "name": "From",
+                "value": "Gregory Smith <greg@naiwe.com>"
+            },
+            {
+                "name": "To",
+                "value": "test@agilefrontiers.com <test@agilefrontiers.com>"
+            },
+            {
+                "name": "Date",
+                "value": "Fri, 19 Nov 2021 14:59:17 +0000"
+            },
+            {
+                "name": "Mime-Version",
+                "value": "1.0"
+            },
+            {
+                "name": "Content-Type",
+                "value": "multipart/alternative;  boundary=\"=_4LXBs34G4KyetsK+I3OZQnCAJoToshUU5gH13hb5RGFhj4Kl\""
+            },
+            {
+                "name": "References",
+                "value": "<76AB858F-E7F9-4F27-8F50-72A8B2962BC8@naiwe.com>"
+            },
+            {
+                "name": "X-Priority",
+                "value": "3 (Normal)"
+            },
+            {
+                "name": "X-Mailer",
+                "value": "Amazon WorkMail"
+            },
+            {
+                "name": "Thread-Index",
+                "value": "AQHX3VYFVLMCTTK7T1iYiMriUgLhaQ=="
+            },
+            {
+                "name": "Thread-Topic",
+                "value": "test 9:59"
+            },
+            {
+                "name": "X-Wm-Sent-Timestamp",
+                "value": "1637333956"
+            },
+            {
+                "name": "Message-ID",
+                "value": "<0100017d38b57c61-f1af1c03-d81e-4101-b7df-4efaac95b71e-000000@email.amazonses.com>"
+            },
+            {
+                "name": "Feedback-ID",
+                "value": "1.us-east-1.LF00NED762KFuBsfzrtoqw+Brn/qlF9OYdxWukAhsl8=:AmazonSES"
+            },
+            {
+                "name": "X-SES-Outgoing",
+                "value": "2021.11.19-54.240.11.32"
+            },
+            {
+                "name": "To",
+                "value": "greg@agilefrontiers.com"
+            }
+        ],
+        "commonHeaders": {
+            "returnPath": "0100017d38b57c61-f1af1c03-d81e-4101-b7df-4efaac95b71e-000000@amazonses.com",
+            "from": [
+                "Gregory Smith <greg@naiwe.com>"
+            ],
+            "date": "Fri, 19 Nov 2021 14:59:17 +0000",
+            "to": [
+                "\"test@agilefrontiers.com\" <test@agilefrontiers.com>",
+                "greg@agilefrontiers.com"
+            ],
+            "messageId": "<0100017d38b57c61-f1af1c03-d81e-4101-b7df-4efaac95b71e-000000@email.amazonses.com>",
+            "subject": "test 9:59"
+        }
+    },
+    "receipt": {
+        "timestamp": "2021-11-19T14:59:18.056Z",
+        "processingTimeMillis": 628,
+        "recipients": [
+            "test@agilefrontiers.com"
+        ],
+        "spamVerdict": {
+            "status": "PASS"
+        },
+        "virusVerdict": {
+            "status": "PASS"
+        },
+        "spfVerdict": {
+            "status": "PASS"
+        },
+        "dkimVerdict": {
+            "status": "PASS"
+        },
+        "dmarcVerdict": {
+            "status": "GRAY"
+        },
+        "action": {
+            "type": "SNS",
+            "topicArn": "arn:aws:sns:us-east-1:331904356434:agilefrontiers-ses",
+            "encoding": "UTF8"
+        }
+    },
+    "content": "Return-Path: <0100017d38b57c61-f1af1c03-d81e-4101-b7df-4efaac95b71e-000000@amazonses.com>\r\nReceived: from a11-32.smtp-out.amazonses.com (a11-32.smtp-out.amazonses.com [54.240.11.32])\r\n by inbound-smtp.us-east-1.amazonaws.com with SMTP id pp7o1b869j1mbmmegnjm215bi5o331noilsell01\r\n for test@agilefrontiers.com;\r\n Fri, 19 Nov 2021 14:59:18 +0000 (UTC)\r\nX-SES-Spam-Verdict: PASS\r\nX-SES-Virus-Verdict: PASS\r\nReceived-SPF: pass (spfCheck: domain of amazonses.com designates 54.240.11.32 as permitted sender) client-ip=54.240.11.32; envelope-from=0100017d38b57c61-f1af1c03-d81e-4101-b7df-4efaac95b71e-000000@amazonses.com; helo=a11-32.smtp-out.amazonses.com;\r\nAuthentication-Results: amazonses.com;\r\n spf=pass (spfCheck: domain of amazonses.com designates 54.240.11.32 as permitted sender) client-ip=54.240.11.32; envelope-from=0100017d38b57c61-f1af1c03-d81e-4101-b7df-4efaac95b71e-000000@amazonses.com; helo=a11-32.smtp-out.amazonses.com;\r\n dkim=pass header.i=@amazonses.com;\r\n dkim=pass header.i=@naiwe.com;\r\n dmarc=none header.from=naiwe.com;\r\nX-SES-RECEIPT: AEFBQUFBQUFBQUFHQ2Y2K3JmMVJVWUx1eG93SndLV200ZVdUQzF5ajFrKzZ4aS9GYmdqNmpndkhYVFFIQks1UXZWZWNqUklEc3JRMEVLQ1NJcmZmSTBSL3hzMVM0VFdGSFJxY3NTMjlVU3V6MGptWlNCZEhEd2hyTFV6Ny9hVXptVm9LTG5zRkVDRlg2eEhodHZwZERBQ1lWMjFPUzVRd0wvNE5FMDBPQUdEY1RUb012cFdsUGpGa2tqTWREZ3dlSXVPR2wyT29SaktTa2V5VkpNcG04N2FhQ2kwMlVsamNJamlGVHJYUEFsblZXcXRMcEl6N0FkQzRqUWcwWXFOYWQ3d1lLaU0vdW9vNEhVMWJ5SGF0ZlhiTXhyUENYcW5UbkxCZ1FHckp0eVFPRDJ1QTFvb0E4TjlySEFhQXdKVzVXLzdHMTZ4M0VlUmNkQitqdmN1L3BMR2JsazhLalQwdk1YSFYzcWEzNHdML0xDVG03blF6cGNnPT0=\r\nX-SES-DKIM-SIGNATURE: a=rsa-sha256; q=dns/txt; b=f6DW7nNaOQDvCld2eM6z6subS/3DA30hkhRzSl9BkR81dzrGUBBBFsIQBtzmzq8f9dkn/hH/KrRUsB0ps4AXlzuzkYLVZ4xwT+gV8xYhYC2w8EC0/7JtRLFbnCJhn6TsO97cft9MCz/Nx+rleRvvkswHGGd7tCu3N5LDWo7fwlQ=; c=relaxed/simple; s=ug7nbtf4gccmlpwj322ax3p6ow6yfsug; d=amazonses.com; t=1637333958; v=1; bh=op2ghlgl5zR/EwkJhn6tDlaptgu5QoyeN8g7wPgL8yU=; h=From:To:Cc:Bcc:Subject:Date:Message-ID:MIME-Version:Content-Type:X-SES-RECEIPT;\r\nDKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;\r\n\ts=2rotzepakrnqzb4ex2hqzihae4ibkwow; d=naiwe.com; t=1637333957;\r\n\th=Subject:From:To:Date:Mime-Version:Content-Type:References:Message-Id;\r\n\tbh=op2ghlgl5zR/EwkJhn6tDlaptgu5QoyeN8g7wPgL8yU=;\r\n\tb=QVc45QhP5h0NQ6mfI+cxQdSmjKfU6RdxAUKV4FzVOwGADMkL7ijJ8Us03TE/EA8l\r\n\t2WxXClpQ1HiH0T/nxUhRQHOFSneFh+LIb3ZmQdvBJ6rsc9oJgHQGw+PnNpQWEcyGT0P\r\n\tG4dFxJa7Ohd2pCaDHW8mgazAa4gwyujawlwQQIyVkleU6KYZg6Z+Zsqm3hIAINB4j3W\r\n\ttyf7PlzwwzvL75B0/PsZ4AxDOYATG3KG9itIFLXmZd57Gy2qRzU9pkwFI5YzfxU8oSb\r\n\t/uFM36DWAnJGCWL3fnFJBTxx+qkhE45bMUIuL3BEr04Bd8RjlwQ+ZnuvsQk2Qcd/p/9\r\n\ttT76mcJZLg==\r\nDKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;\r\n\ts=ug7nbtf4gccmlpwj322ax3p6ow6yfsug; d=amazonses.com; t=1637333957;\r\n\th=Subject:From:To:Date:Mime-Version:Content-Type:References:Message-Id:Feedback-ID;\r\n\tbh=op2ghlgl5zR/EwkJhn6tDlaptgu5QoyeN8g7wPgL8yU=;\r\n\tb=BmXmSbNyPzNqnfHR1XGS/sYTKJ1qMaNzLaCKVo8e5fkMOG4E6r0Gy77rt1M1xYtM\r\n\tCKQQDegbQGFCHKJWyGXf7jenzpK52K/+rWmKCxj0whOPYDgVLBSbeOWc07qQDqR5spp\r\n\t1m6G9mvn1G7Ie3AS2OmUcTM02WgvapidaA4Q/L4M=\r\nSubject: test 9:59\r\nFrom: =?UTF-8?Q?Gregory_Smith?= <greg@naiwe.com>\r\nTo: =?UTF-8?Q?test=40agilefrontiers=2Ecom?= <test@agilefrontiers.com>\r\nDate: Fri, 19 Nov 2021 14:59:17 +0000\r\nMime-Version: 1.0\r\nContent-Type: multipart/alternative; \r\n boundary=\"=_4LXBs34G4KyetsK+I3OZQnCAJoToshUU5gH13hb5RGFhj4Kl\"\r\nReferences: <76AB858F-E7F9-4F27-8F50-72A8B2962BC8@naiwe.com>\r\nX-Priority: 3 (Normal)\r\nX-Mailer: Amazon WorkMail\r\nThread-Index: AQHX3VYFVLMCTTK7T1iYiMriUgLhaQ==\r\nThread-Topic: test 9:59\r\nX-Wm-Sent-Timestamp: 1637333956\r\nMessage-ID: <0100017d38b57c61-f1af1c03-d81e-4101-b7df-4efaac95b71e-000000@email.amazonses.com>\r\nFeedback-ID: 1.us-east-1.LF00NED762KFuBsfzrtoqw+Brn/qlF9OYdxWukAhsl8=:AmazonSES\r\nX-SES-Outgoing: 2021.11.19-54.240.11.32\r\nTo: greg@agilefrontiers.com\r\n\r\nThis is a multi-part message in MIME format. Your mail reader does not\r\nunderstand MIME message format.\r\n--=_4LXBs34G4KyetsK+I3OZQnCAJoToshUU5gH13hb5RGFhj4Kl\r\nContent-Type: text/plain; charset=UTF-8\r\nContent-Transfer-Encoding: base64\r\n\r\nwqANCg0K\r\n--=_4LXBs34G4KyetsK+I3OZQnCAJoToshUU5gH13hb5RGFhj4Kl\r\nContent-Type: text/html; charset=utf-8\r\nContent-Transfer-Encoding: quoted-printable\r\n\r\n<html xmlns:o=3D\"urn:schemas-microsoft-com:office:office\" xmlns:w=3D\"urn:=\r\nschemas-microsoft-com:office:word\" xmlns:m=3D\"http://schemas.microsoft.co=\r\nm/office/2004/12/omml\" xmlns=3D\"http://www.w3.org/TR/REC-html40\"><head><m=\r\neta http-equiv=3DContent-Type content=3D\"text/html; charset=3Dutf-8\"><met=\r\na name=3DGenerator content=3D\"Microsoft Word 15 (filtered medium)\"><style=\r\n><!--\r\n/* Font Definitions */\r\n@font-face\r\n=09{font-family:\"Cambria Math\";\r\n=09panose-1:2 4 5 3 5 4 6 3 2 4;}\r\n@font-face\r\n=09{font-family:Calibri;\r\n=09panose-1:2 15 5 2 2 2 4 3 2 4;}\r\n/* Style Definitions */\r\np.MsoNormal, li.MsoNormal, div.MsoNormal\r\n=09{margin:0in;\r\n=09font-size:11.0pt;\r\n=09font-family:\"Calibri\",sans-serif;}\r\nspan.EmailStyle17\r\n=09{mso-style-type:personal-compose;\r\n=09font-family:\"Calibri\",sans-serif;\r\n=09color:windowtext;}\r\n=2EMsoChpDefault\r\n=09{mso-style-type:export-only;\r\n=09font-family:\"Calibri\",sans-serif;}\r\n@page WordSection1\r\n=09{size:8.5in 11.0in;\r\n=09margin:1.0in 1.0in 1.0in 1.0in;}\r\ndiv.WordSection1\r\n=09{page:WordSection1;}\r\n--></style></head><body lang=3DEN-US link=3D\"#0563C1\" vlink=3D\"#954F72\" s=\r\ntyle=3D'word-wrap:break-word'><div class=3DWordSection1><p class=3DMsoNor=\r\nmal><o:p>&nbsp;</o:p></p></div></body></html>\r\n\r\n--=_4LXBs34G4KyetsK+I3OZQnCAJoToshUU5gH13hb5RGFhj4Kl--\r\n"
+}
