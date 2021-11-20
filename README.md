@@ -10,7 +10,7 @@ The 'big idea' is to forward any emails that have an "unknown" email address to 
 
 A rule is put just before the Workmail rule that creates an SNS message with the incoming email event and sends it to a custom Lambda. 
 
-The Lambda determines if the email is one of the already verified user emails. If it already verified, it passes the event on to Workmail for delivery.
+The Lambda determines if the email is one of the already verified user emails. If it is already verified, it passes the event on to Workmail for delivery.
 
 If the recipient is not a verified email, it will update the headers and forward it back to SES as a new email. First, it removes a number of headers (DKIM, etc...) which would interfere with forwarding the email, and sets the recipient to the `defaultEmail` (specificed in a config object). Also, because SES will not allow unverified senders to deliver email, the `TO` field is set to the `adminEmail` (eg: admin@domain.awsapps.com). Finally, this new email is forwarded to SES using the `SES.sendRawEmail()`. As a convenience, the `Reply-To` field in the forwarded email is set to the original sender, so that when you click the "Reply" button in the email client, the `To` field is set appropriately.
 
@@ -187,7 +187,8 @@ const log = console.log;
 * This is a bit of a hack. 
 * It seems like a simple thing to implement and I'm surprised the AWS Workmail team hasn't implemented such a feature before now. 
 * There may be some financial reasons since AWS charges $4.00 per month for each "user". 
-* While you *can* create aliases, it is a bit of a headache.
+* While you *can* create aliases, it is a bit of a headache to try and configure EVERY possible special-purpose email address as an alias.
+* Although, it may be an anti-spam feature to require all aliases to be pre-defined. 
 * Best wishes, and Continued Success!
 
 Greg Smith
