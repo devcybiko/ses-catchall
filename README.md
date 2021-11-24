@@ -19,6 +19,7 @@ The trick here is that the Lambda will screen all incoming emails and look for a
 ## LIMITATIONS
 * There is a 10MB limit on attachments in SES. Despite Workmail's 25MB limit, SES will bounce any incoming emails with more that 10MB
 * There may also be some issues with multiple attachments.
+* **UPDATE** The SNS message queue has a limit of 256KB which severely limits the size of attachments
 
 ## WARNINGS
 * Be careful to specify the correct `defaultEmail` and `adminEmail`.
