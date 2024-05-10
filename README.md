@@ -86,12 +86,12 @@ const config = {
 
 ## SES SETUP
 * in the SES HOME console...
-* Click Rule Sets...
+* Click Email receiving...
 * Click VIEW ACTIVE RULE SET
 * Click on the Rule name for your Workmail
   * example: m-4dfb6326f56e4a06a6e...
 * Under actions, create a new action
-  * Select "Add Action -> SNS"
+  * Select "Add Action -> Publish to Amazon SNS topic"
   * Select SNS -> Encoding UTF-8
   * Select SNS topic -> Create a SNS Topic
     * Topic Name: `<domain.name>`-sns (example: `agilefrontiers-sns`)
